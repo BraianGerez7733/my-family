@@ -54,6 +54,13 @@ body {
   perspective: 1000px;
 }
 
+.hero-image-button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
 .hero-image {
   width: 280px;
   height: 280px;
@@ -69,6 +76,17 @@ body {
 .hero-image:hover {
   transform: scale(1.05) rotate(2deg) translateY(-5px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 0 0 5px var(--accent);
+}
+
+.hero-image.is-expanded {
+  width: min(78vw, 420px);
+  height: min(78vw, 420px);
+  transform: scale(1.02) rotate(0deg);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.14), 0 0 0 6px var(--accent);
+}
+
+.hero-image.is-expanded:hover {
+  transform: scale(1.02) rotate(0deg);
 }
 
 .app-title {
@@ -486,5 +504,9 @@ body {
     height: 200px;
     border-radius: 20px;
   }
-}
 
+  .hero-image.is-expanded {
+    width: min(82vw, 320px);
+    height: min(82vw, 320px);
+  }
+}
