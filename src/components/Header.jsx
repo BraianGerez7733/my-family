@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../assets/hero.png';
+import heroImg from '../assets/family_uploaded.jpg';
 
 export default function Header() {
   return (
