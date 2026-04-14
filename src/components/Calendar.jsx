@@ -30,7 +30,7 @@ export default function Calendar({ events, onDayClick }) {
   };
 
   const renderDaysHeader = () => {
-    const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+    const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
     return (
       <div className="days-row">
         {days.map((day, i) => (
