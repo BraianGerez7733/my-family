@@ -30,12 +30,21 @@ export default function Calendar({ events, onDayClick }) {
   };
 
   const renderDaysHeader = () => {
-    const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const days = [
+      { full: 'Domingo', short: 'Dom' },
+      { full: 'Lunes', short: 'Lun' },
+      { full: 'Martes', short: 'Mar' },
+      { full: 'Miércoles', short: 'Mié' },
+      { full: 'Jueves', short: 'Jue' },
+      { full: 'Viernes', short: 'Vie' },
+      { full: 'Sábado', short: 'Sáb' }
+    ];
     return (
       <div className="days-row">
         {days.map((day, i) => (
           <div className="day-name" key={i}>
-            {day}
+            <span className="day-full">{day.full}</span>
+            <span className="day-short">{day.short}</span>
           </div>
         ))}
       </div>

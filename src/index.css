@@ -119,6 +119,14 @@ body {
   letter-spacing: 1.5px;
 }
 
+.day-short {
+  display: none;
+}
+
+.day-full {
+  display: inline;
+}
+
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -339,6 +347,23 @@ body {
   }
   .schedule-table {
     min-width: 600px;
+  }
+  .day-full {
+    display: none;
+  }
+  .day-short {
+    display: inline;
+  }
+  .calendar-day {
+    padding: 4px;
+  }
+  .day-number {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+  .day-name {
+    font-size: 0.8rem;
+    letter-spacing: 0;
   }
 }
 
