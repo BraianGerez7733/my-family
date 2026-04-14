@@ -1,16 +1,16 @@
 :root {
   --font-family: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --bg-color: #fdfbf7;
-  --bg-element: #ffffff;
+  --bg-color: #fdfafb;
+  --bg-element: #fff5f8;
   --text-main: #4a4a4a;
   --text-muted: #9ca3af;
   --accent: #f472b6;
   --accent-hover: #ec4899;
-  --accent-light: rgba(244, 114, 182, 0.15);
-  --border: #e5e7eb;
+  --accent-light: rgba(244, 114, 182, 0.25);
+  --border: #fbcfe8;
   --success: #34d399;
   --danger: #fb7185;
-  --today-bg: rgba(52, 211, 153, 0.15);
+  --today-bg: rgba(244, 114, 182, 0.15);
 }
 
 * {
@@ -191,7 +191,7 @@ body {
 
 .calendar-day.is-today {
   background: var(--today-bg);
-  border-color: var(--success);
+  border-color: var(--accent);
 }
 
 .day-number {
@@ -203,7 +203,7 @@ body {
 }
 
 .is-today .day-number {
-  color: var(--success);
+  color: var(--accent);
 }
 
 /* Events */
