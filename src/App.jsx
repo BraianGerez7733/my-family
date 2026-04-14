@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Calendar from './components/Calendar';
 import EventModal from './components/EventModal';
+import Piano from './components/Piano';
 import { supabase } from './supabaseClient';
 import { format } from 'date-fns';
 
@@ -99,6 +100,8 @@ function App() {
         events={events} 
         onDayClick={handleDayClick} 
       />
+
+      <Piano />
 
       {showModal && (
         <EventModal

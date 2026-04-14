@@ -29,7 +29,7 @@ body {
 }
 
 #root {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem;
   width: 100%;
@@ -79,20 +79,21 @@ body {
 }
 
 .calendar-header h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .btn-nav {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--text-main);
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .btn-nav:hover {
@@ -110,19 +111,19 @@ body {
 
 .day-name {
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-muted);
-  padding: 0.5rem 0;
-  font-size: 0.9rem;
+  padding: 0.8rem 0;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: minmax(120px, auto);
-  gap: 8px;
+  grid-auto-rows: minmax(200px, auto);
+  gap: 12px;
 }
 
 .calendar-day {
@@ -161,9 +162,9 @@ body {
 }
 
 .day-number {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
   align-self: flex-end;
   color: var(--text-muted);
 }
@@ -176,14 +177,14 @@ body {
 .event-indicator {
   background: var(--accent);
   color: white;
-  font-size: 0.75rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-bottom: 4px;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
+  font-weight: 700;
   animation: fadeIn 0.3s ease;
 }
 
