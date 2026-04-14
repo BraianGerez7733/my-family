@@ -56,56 +56,48 @@ export default function Calendar({ events, onDayClick }) {
     let formattedDate = "";
 
     while (day <= endDate) {
-      for (let i = 0; i < 7; i++) {
-        formattedDate = format(day, dateFormat);
-        const cloneDay = day;
-        
-        // Find events for this day
-        const dayEvents = events.filter(e => {
-            if (!e.date) return false;
-            // Compare YYYY-MM-DD
-            const eventDateStr = e.date.split('T')[0];
-            const currentStr = format(cloneDay, 'yyyy-MM-dd');
-            return eventDateStr === currentStr;
-        });
+      formattedDate = format(day, dateFormat);
+      const cloneDay = day;
+      
+      // Find events for this day
+      const dayEvents = events.filter(e => {
+          if (!e.date) return false;
+          // Compare YYYY-MM-DD
+          const eventDateStr = e.date.split('T')[0];
+          const currentStr = format(cloneDay, 'yyyy-MM-dd');
+          return eventDateStr === currentStr;
+      });
 
-        days.push(
-          <div
-            className={`calendar-day ${!isSameMonth(day, monthStart) ? "empty" : ""} ${
-              isSameDay(day, new Date()) ? "is-today" : ""
-            }`}
-            key={day}
-            onClick={() => {
-              if (isSameMonth(cloneDay, monthStart)) {
-                onDayClick(cloneDay, dayEvents);
-              }
-            }}
-          >
-            {isSameMonth(day, monthStart) ? (
-              <>
-                <span className="day-number">{formattedDate}</span>
-                <div className="events-container">
-                  {dayEvents.map(ev => (
-                    <div className="event-indicator" key={ev.id} title={ev.title}>
-                      {ev.title}
-                    </div>
-                  ))}
-                </div>
-              </>
-            ) : null}
-          </div>
-        );
-        day = addDays(day, 1);
-      }
-      rows.push(
-        <div className="days-row" key={day}>
-          {days}
+      days.push(
+        <div
+          className={`calendar-day ${!isSameMonth(day, monthStart) ? "empty" : ""} ${
+            isSameDay(day, new Date()) ? "is-today" : ""
+          }`}
+          key={day}
+          onClick={() => {
+            if (isSameMonth(cloneDay, monthStart)) {
+              onDayClick(cloneDay, dayEvents);
+            }
+          }}
+        >
+          {isSameMonth(day, monthStart) ? (
+            <>
+              <span className="day-number">{formattedDate}</span>
+              <div className="events-container">
+                {dayEvents.map(ev => (
+                  <div className="event-indicator" key={ev.id} title={ev.title}>
+                    {ev.title}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : null}
         </div>
       );
-      days = [];
+      day = addDays(day, 1);
     }
 
-    return <div className="calendar-grid">{rows}</div>;
+    return <div className="calendar-grid">{days}</div>;
   };
 
   return (
