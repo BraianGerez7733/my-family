@@ -46,6 +46,31 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  perspective: 1000px;
+}
+
+.hero-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 8px solid var(--bg-element);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 3px var(--accent-light);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  transform: rotate(-1deg);
+}
+
+.hero-image:hover {
+  transform: scale(1.05) rotate(2deg) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 0 0 5px var(--accent);
+}
+
 .app-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -454,3 +479,12 @@ body {
   color: var(--success);
   border-color: rgba(6, 214, 160, 0.3);
 }
+
+@media (max-width: 768px) {
+  .hero-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+  }
+}
+
