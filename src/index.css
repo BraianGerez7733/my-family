@@ -1,16 +1,16 @@
 :root {
   --font-family: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --bg-color: #fdfafb;
-  --bg-element: #fff5f8;
-  --text-main: #4a4a4a;
-  --text-muted: #9ca3af;
-  --accent: #f472b6;
-  --accent-hover: #ec4899;
-  --accent-light: rgba(244, 114, 182, 0.25);
-  --border: #fbcfe8;
-  --success: #34d399;
-  --danger: #fb7185;
-  --today-bg: rgba(244, 114, 182, 0.15);
+  --bg-color: #fce7f3;        /* Fondo principal rosa claro intenso */
+  --bg-element: #fbcfe8;      /* Fondo de los elementos (tarjetas/cuadrículas) en un tono rosa más fuerte */
+  --text-main: #4a044e;       /* Fucsia súper oscuro para contraste de texto principal */
+  --text-muted: #9d174d;      /* Rosa profundo para textos secundarios */
+  --accent: #db2777;          /* Fucsia/Rosa fuerte e intenso */
+  --accent-hover: #be185d;    /* Rosa oscuro para los efectos hover */
+  --accent-light: rgba(219, 39, 119, 0.25);
+  --border: #f472b6;          /* Bordes de color rosa vibrante */
+  --success: #10b981;
+  --danger: #e11d48;
+  --today-bg: rgba(219, 39, 119, 0.2); /* Fondo rosa traslúcido para el día actual */
 }
 
 * {
@@ -74,7 +74,7 @@ body {
 .app-title {
   font-size: 3.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--accent), #ff9a9e);
+  background: linear-gradient(135deg, var(--accent), #ff1493); /* Gradiente rosa hiper intenso */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
