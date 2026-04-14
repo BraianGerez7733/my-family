@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Calendar from './components/Calendar';
 import EventModal from './components/EventModal';
 import ClassSchedule from './components/ClassSchedule';
+import ExtracurricularSchedule from './components/ExtracurricularSchedule';
 import { supabase } from './supabaseClient';
 import { format } from 'date-fns';
 
@@ -102,6 +103,7 @@ function App() {
       />
 
       <ClassSchedule />
+      <ExtracurricularSchedule />
 
 
       {showModal && (
